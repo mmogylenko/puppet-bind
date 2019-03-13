@@ -16,6 +16,10 @@ options {
 <%end -%>
 };
 
+statistics-channels {
+  inet 127.0.0.1 port 8053 allow { 127.0.0.1; };
+};
+
 logging {
 <% @logging['channels'].sort.each do |key, hash| -%>
   channel <%=key%> {
